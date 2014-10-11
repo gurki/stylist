@@ -1,0 +1,82 @@
+<!doctype html>
+
+
+<head>
+    <title>Stylist</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="it's fabulous!">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+</head>
+
+
+<body>
+
+    <table align='center'>
+        <td align='right'>
+            <a href="#" class="tooltip">
+                <button id="colButton" class="pure-button" style='font-size:70%'>COLORISE</button>
+                <span>colorisation on/off</span>
+            </a>
+        </td>
+        <td align='center'>
+            <a href="#" class="tooltip">
+                <button id="imgButton" class="pure-button" style='font-size:70%'>ZOFIE</button>
+                <span>switch images</span>
+            </a>
+        </td>
+        <td align='left'>
+            <a href="#" class="tooltip">
+                <button id="linkButton" class="pure-button" style='font-size:70%'>GET LINK</button>
+                <span>share your color!</span>
+            </a>
+        </td>
+    </table>
+    <table align='center'>
+        <tr height='10px'>
+        <tr>
+            <td><input id = "hueRange" type="range" min="0" max="360" style="color: #FFFFFF" oninput="updateColor()" value='0'></td>
+            <td>&nbsp</td>
+            <td align='left'><button id='hueButton' class='pure-button' style='font-size:70%; width:110px'>HUE: 0</button></td>
+            <!-- <td align='left'>HUE</td> -->
+        </tr>
+        <tr>
+            <td><input id = "satRange" type="range" min="0" max="100" style="color: #FFFFFF" oninput="updateColor()" value='50'></td>
+            <td>&nbsp</td>
+            <td align='left'><button id='satButton' class='pure-button' style='font-size:70%; width:110px'>SATURATION: 50</button></td>
+            <!-- <td align='left'>SATURATION</td> -->
+        </tr>
+        <tr>
+            <td><input id = "ligRange" type="range" min="0" max="100" style="color: #FFFFFF" oninput="updateColor()" value='50'></td>
+            <td>&nbsp</td>
+            <td align='left'><button id='ligButton' class='pure-button' style='font-size:70%; width:110px'>LIGHTNESS:  +0</button></td>
+            <!-- <td align='left'>LIGHTNESS</td> -->
+        </tr>
+    </table>
+
+    <br>
+
+    <div style="text-align:center">
+        <div class ="image">
+            <img id='image' class="base">
+            <canvas id="canvas" width="400" height="600" class="overlay"></canvas>
+        </div>      
+    </div>
+
+    <br>
+    
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/color.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+<footer>
+    <p>Tobias Gurdan, © 2014</p>
+</footer>
+
+
+</html>
+
